@@ -1,7 +1,8 @@
 #!/bin/bash -x
 echo "Welcome to  Sorting Arithmetic problem" 
 #TAKING THE THREE INPUTS
-declare -A Arithmetic  
+declare -A Arithmetic
+declare -a ArithmeticArray  
 read -p "Enter the value of a :" a
 read -p "Enter the value of b :" b
 read -p "Enter the value of c :" c
@@ -18,3 +19,7 @@ echo "Computing the result1 :"${!Arithmetic[@]}  : ${Arithmetic[@]}  "
 echo "Computing the result2 :"${!Arithmetic[@]}  : ${Arithmetic[@]} " 
 echo "Computing the result3 :"${!Arithmetic[@]}  : ${Arithmetic[@]} "
 echo "Computing the result4 :"${!Arithmetic[@]}  : ${Arithmetic[@]} "
+for value in ${!Arithmetic[@]}
+do
+		ArithmeticArray[$value]="${Arithmetic[$value]}"
+done
