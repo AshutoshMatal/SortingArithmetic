@@ -5,4 +5,8 @@ read -p "Enter the value of a :" a
 read -p "Enter the value of b :" b
 read -p "Enter the value of c :" c
 result=`echo "$a + $b * $c" | bc -l`
+#TAKING A NEW  EXP[RESSION AND FINDING A RESULT 
+result1=`echo "$a * $b +$c" | bc -l` 
 echo " Computing the result : $result "
+echo "Computing the result1 : $result1 " 
+
